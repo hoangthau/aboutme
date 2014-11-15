@@ -1,0 +1,120 @@
+
+header {
+    width: 100%;
+    height: 2px;
+    background-color: #04756F;
+}
+.main-content{
+    margin-left: 200px;
+    transition: all 0.5s;
+}
+
+footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    height: 30px;
+    width: 100%;
+    background: #04756F;
+    text-align: center;
+    color: #fff;
+    padding: 5px;
+    z-index: 10;
+}
+
+.sidebar {
+    position: fixed;
+    top: 2px;
+    left: 0;
+    height: 100%;
+    width: 200px;
+    background-color: #fff ;
+    border: 1px solid #fff;
+    box-shadow: 2px 2px 5px #333;
+    transition: all 0.5s;
+}
+
+.sidebar-icon i{
+    padding: 5px;
+}
+
+.sidebar-icon i:hover{
+    text-shadow: 1px 1px #333;
+    cursor: pointer;
+    color: #2E0927;
+}
+
+.sidebar .info {
+    padding: 10px;
+}
+
+.sidebar .info img {
+    width: 150px;
+    height: 150px;
+    box-shadow: 1px 1px 5px #333;
+}
+
+.sidebar .info h3.name {
+    font-weight: 700;
+    color: #2E0927;
+    border-bottom: 2px solid #D90000;
+    padding: 5px;
+}
+
+.sidebar .info > p {
+    font-weight: 600;
+}
+
+.sidebar-hidden {
+    left: -180px;
+}
+
+.sidebar-hidden .info {
+    position: absolute;
+    left: -20px;
+}
+
+.sidebar-hidden:hover{
+    background-color: #ececec;
+    opacity: 0.5;
+}
+
+.main-content-mg {
+    margin-left: 20px;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    box-shadow: 1px 1px 2px #333;
+}
+
+nav ul li {
+    display: inline-block;
+    width: 20%;
+    text-align: center;
+    font-size: 1.5em;
+    padding: 10px;
+    transition: all 0.3s;
+}
+
+nav ul li:hover {
+    border-bottom: 2px solid #FF8C00;
+    cursor: pointer;
+}
+
+nav a:hover{
+    text-decoration: none;
+}
+
+nav ul li.active {
+    border-bottom: 2px solid #FF8C00;
+}
+
+
+
+
+
+
+

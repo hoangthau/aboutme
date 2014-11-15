@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html ng-app="AppAboutMe">
+<head>
+    <title>About me</title>
+    <link rel="stylesheet" href="libs/bootstrap.css" />
+    <link rel="stylesheet" href="libs/normalize.css" />
+    <link rel="stylesheet" href="libs/font-awesome.css" />
+    <link rel="stylesheet" href="styles/main.css" />
+</head>
+<body class="content-wrapper" ng-controller="AppCtrl as ame">
+    <header></header>
+    <div class="sidebar pull-left" ng-class="{ 'sidebar-hidden': ame.sidebarHidden }">
+        <span class="sidebar-icon"><i class="fa fa-reorder pull-right" ng-click="ame.hideSideBar()"></i></span>
+        <div class="clearfix text-center info">
+            <img src="imgs/personal.jpg" alt="Thau Nguyen" class="img-circle">
+            <h3 class="name">Thau Nguyen</h3>
+            <p>Male</p>
+            <p>August 08</p>
+            <p>hoangthau627@gmail.com</p>
+            <p>TP. Ho Chi Minh, Vietnam</p>
+        </div>
+        <div class="text-center">
+            <img src="imgs/angular.png" alt="Angular" width="100px" height="100px">
+        </div>
+    </div>
+    <div class="main-content" ng-class="{ 'main-content-mg': ame.sidebarHidden }">
+        <nav>
+            <ul>
+                <li ng-click="ame.onSelectLink(1)" ng-class="{ 'active': ame.selectedLink === 1}"><a href="#">Skills</a></li>
+                <li ng-click="ame.onSelectLink(2)" ng-class="{ 'active': ame.selectedLink === 2}"><a href="#">Projects</a></li>
+                <li ng-click="ame.onSelectLink(3)" ng-class="{ 'active': ame.selectedLink === 3}"><a href="#">Hobbies</a></li>
+            </ul>
+        </nav>
+    </div>
+    <footer>
+        2014 All rights reserved. Thau Nguyen
+    </footer>
+<script src="libs/angular.js"></script>
+<script src="libs/angular-route.js"></script>
+<script src="libs/jquery-1.11.1.min.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
