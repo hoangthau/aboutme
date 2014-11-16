@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="styles/main.css" />
 </head>
 <body class="content-wrapper" ng-controller="AppCtrl as ame">
-    <header></header>
+    <header ng-style="ame.widthSpinner"></header>
     <div class="sidebar" ng-class="{ 'sidebar-hidden': ame.sidebarHidden }">
         <span class="sidebar-icon"><i class="fa fa-reorder pull-right" ng-click="ame.hideSideBar()"></i></span>
         <div class="clearfix text-center info">
@@ -56,6 +56,13 @@
                     <img src="imgs/javascript.png" alt="">
 
                 </div>
+            </div>
+            <div class="project" ng-show="ame.selectedLink===2">
+
+            </div>
+            <div class="hobby" ng-show="ame.selectedLink===3">
+                <h3>Video</h3>
+                <iframe width="560" height="315" src="http://www.youtube.com/embed/dkf4J8cy0qU" frameborder="0" allowfullscreen></iframe>
             </div>
         </div>
     </div>

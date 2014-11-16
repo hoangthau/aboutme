@@ -13,12 +13,24 @@
     function AppCtrl($interval){
         var ame = this;
         ame.selectedLink = 0;
+        var widthSpinner = 0;
+        ame.widthSpinner = {
+            width: widthSpinner+'%'
+        };
         ame.hideSideBar = function(){
             ame.sidebarHidden = !ame.sidebarHidden;
         };
         ame.onSelectLink= function(stt){
             ame.selectedLink = stt;
-        }
+        };
+        $interval(function(){
+            widthSpinner++;
+            if(widthSpinner <= 100){
+                ame.widthSpinner = {
+                    width: widthSpinner+'%'
+                };
+            }
+        })
 
 
     }
