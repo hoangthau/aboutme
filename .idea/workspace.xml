@@ -35,7 +35,7 @@
       <file leaf-file-name="main.css" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/styles/main.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="58" column="16" selection-start="890" selection-end="890" vertical-scroll-proportion="0.29159212">
+            <state line="61" column="1" selection-start="948" selection-end="948" vertical-scroll-proportion="0.38282648">
               <folding />
             </state>
           </provider>
@@ -159,8 +159,8 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="0" />
-    <editor active="false" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="1" />
+    <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -236,7 +236,7 @@
           <properties />
         </breakpoint>
       </default-breakpoints>
-      <option name="time" value="1652" />
+      <option name="time" value="1656" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
@@ -252,7 +252,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/styles/main.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="58" column="16" selection-start="890" selection-end="890" vertical-scroll-proportion="0.29159212">
+        <state line="61" column="1" selection-start="948" selection-end="948" vertical-scroll-proportion="0.38282648">
           <folding />
         </state>
       </provider>
