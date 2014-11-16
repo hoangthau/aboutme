@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html ng-app="AppAboutMe">
 <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>About me</title>
     <link rel="stylesheet" href="libs/bootstrap.css" />
     <link rel="stylesheet" href="libs/normalize.css" />
@@ -9,7 +12,7 @@
 </head>
 <body class="content-wrapper" ng-controller="AppCtrl as ame">
     <header></header>
-    <div class="sidebar pull-left" ng-class="{ 'sidebar-hidden': ame.sidebarHidden }">
+    <div class="sidebar" ng-class="{ 'sidebar-hidden': ame.sidebarHidden }">
         <span class="sidebar-icon"><i class="fa fa-reorder pull-right" ng-click="ame.hideSideBar()"></i></span>
         <div class="clearfix text-center info">
             <img src="imgs/personal.jpg" alt="Thau Nguyen" class="img-circle">
@@ -31,6 +34,30 @@
                 <li ng-click="ame.onSelectLink(3)" ng-class="{ 'active': ame.selectedLink === 3}"><a href="#">Hobbies</a></li>
             </ul>
         </nav>
+        <div style="padding: 20px;">
+            <div class="welcome" ng-show="!ame.selectedLink">
+                <h3 style="color: #333; font-weight: 700;">Welcome</h3>
+            </div>
+            <div class="skill" ng-show="ame.selectedLink===1">
+                <div class="bg">
+                    <img src="imgs/angular.png" alt="">
+                    <img src="imgs/html5.png" alt="">
+                    <img src="imgs/css3.png" alt="">
+                    <img src="imgs/jquery.png" alt="">
+                    <img src="imgs/bootstrap.png" alt="">
+                    <img src="imgs/yeoman.png" alt="">
+                    <img src="imgs/node.png" alt="">
+                    <img src="imgs/grunt.png" alt="">
+                </div>
+                <div class="bg">
+                    <img src="imgs/java.png" alt="">
+                    <img src="imgs/c++.png" alt="">
+                    <img src="imgs/c.png" alt="">
+                    <img src="imgs/javascript.png" alt="">
+
+                </div>
+            </div>
+        </div>
     </div>
     <footer>
         2014 All rights reserved. Thau Nguyen

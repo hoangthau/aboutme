@@ -56,7 +56,7 @@ footer {
 
 .sidebar .info h3.name {
     font-weight: 700;
-    color: #2E0927;
+    color: #333;
     border-bottom: 2px solid #D90000;
     padding: 5px;
 }
@@ -110,6 +110,20 @@ nav a:hover{
 
 nav ul li.active {
     border-bottom: 2px solid #FF8C00;
+    background-color: #f9f9f9;
+}
+
+.bg{
+    background-color: #fff;
+    margin: 15px auto;
+    box-shadow: 1px 1px 5px #333;
+    padding: 20px;
+}
+
+.bg img {
+    width: 100px;
+    height: 100px;
+    margin-right: 20px ;
 }
 
 
