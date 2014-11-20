@@ -11,7 +11,6 @@
     <link rel="stylesheet" href="styles/main.css" />
 </head>
 <body class="content-wrapper" ng-controller="AppCtrl as ame">
-    <header ng-style="ame.widthSpinner"></header>
     <div class="sidebar" ng-class="{ 'sidebar-hidden': ame.sidebarHidden }">
         <span class="sidebar-icon"><i class="fa fa-reorder pull-right" ng-click="ame.hideSideBar()"></i></span>
         <div class="clearfix text-center info">
@@ -26,7 +25,7 @@
             <img src="imgs/angular.png" alt="Angular" width="100px" height="100px">
         </div>
     </div>
-    <div class="main-content" ng-class="{ 'main-content-mg': ame.sidebarHidden }">
+    <div class="main-content" ng-class="{ 'main-content-mg': ame.sidebarHidden }" ng-show="!ame.showSpinner">
         <nav>
             <ul>
                 <li ng-click="ame.onSelectLink(1)" ng-class="{ 'active': ame.selectedLink === 1}"><a href="#">Skills</a></li>
@@ -35,10 +34,16 @@
             </ul>
         </nav>
         <div style="padding: 20px;">
+            <span ng-show="ame.selectedLink"><i class="fa fa-2x fa-home icon-home" ng-click="ame.selectedLink=false"></i></span>
             <div class="welcome" ng-show="!ame.selectedLink">
-                <h3 style="color: #333; font-weight: 700;">Welcome</h3>
+                <h3 class="app-heading">Introduction</h3>
+                <p style="text-align: justify;">My major is Computer Science. I've graduated at Can Tho University with very good Bachelor Degree.
+                I love programming, so I also know many languages and technologies: C++, HTML5, CSS3, Jquery, JqueryUI, Boostrap, AngularJS, MVC framework, Javascript.
+                Especially, I focus on website technology.
+
+                I'm an experienced web developer with over 2 years of experiences through studying(Can Tho University) and working( TMA Solutions).</p>
             </div>
-            <div class="skill" ng-show="ame.selectedLink===1">
+            <div class="skill animate-scale" ng-show="ame.selectedLink===1">
                 <div class="bg">
                     <img src="imgs/angular.png" alt="">
                     <img src="imgs/html5.png" alt="">
@@ -57,18 +62,72 @@
 
                 </div>
             </div>
-            <div class="project" ng-show="ame.selectedLink===2">
+            <div class="project animate-slide" ng-show="ame.selectedLink===2">
+                <h3 class="app-heading">Library Management System</h3>
 
+                <p>A web application for small and medium-size companies, which supports administrators in:</p>
+                <ul>
+                    <li>Library managing activities (e.g. member, adding books, searching books , deleting books, checking out/in books, …)</li>
+                    <li>Reports : member wise book issued /received report(Dept wise), book movement report, daily book issued report, daily book received report,…</li>
+                </ul>
+
+                <h4>Job description & roles:</h4>
+                <ul>
+                    <li>Working on Analysis and Design</li>
+                    <li>Feature implementing</li>
+                    <li>Performing code review and technical supports</li>
+                </ul>
+
+                <h4>Technologies:</h4>
+                <ul>
+                    <li>AngularJS</li>
+                    <li>jQuery</li>
+                    <li>jQueryUI</li>
+                    <li>HTML5</li>
+                    <li>CSS3</li>
+                    <li>Ajax</li>
+                    <li>Google Chart</li>
+                </ul>
+
+                <h3 class="app-heading">User Authentication Using Face Recognition System</h3>
+
+                <p>A desktop application on Linux, which provides functionalities to:</p>
+                <ul>
+                    <li>Using face to login system</li>
+                    <li>Recognition from outdoor facial images.</li>
+                    <li>Easy and fast facial recognition system for automatically identifying or verifying a person using computer webcam.</li>
+                </ul>
+
+                <h4>Job description & roles:</h4>
+                <ul>
+                    <li>Involving in implementation</li>
+                    <li>Performing code review and technical supports</li>
+                </ul>
+
+                <h4>Technologies</h4>
+                <ul>
+                    <li>SVM</li>
+                    <li>Data Mining</li>
+                    <li>Machine Learning</li>
+                    <li>C++</li>
+                    <li>Shell script</li>
+                </ul>
             </div>
-            <div class="hobby" ng-show="ame.selectedLink===3">
-                <h3>Video</h3>
+            <div class="hobby animate-slide" ng-show="ame.selectedLink===3">
+                <h3 class="app-heading">Video</h3>
                 <iframe width="560" height="315" src="http://www.youtube.com/embed/dkf4J8cy0qU" frameborder="0" allowfullscreen></iframe>
+                <h3 class="app-heading">Music</h3>
+                <iframe width="410" height="100" src="http://mp3.zing.vn/embed/song/ZWZE7898?autostart=false" frameborder="0" allowfullscreen="true"></iframe>
             </div>
         </div>
     </div>
     <footer>
         2014 All rights reserved. Thau Nguyen
     </footer>
+    <div class="spinner" ng-show="ame.showSpinner">
+        <div class="load-spinner" ng-style="ame.widthSpinner"></div>
+        <span><i class="fa fa-4x fa-spinner fa-spin"></i></span>
+    </div>
 <script src="libs/angular.js"></script>
 <script src="libs/angular-route.js"></script>
 <script src="libs/jquery-1.11.1.min.js"></script>

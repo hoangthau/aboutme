@@ -10,7 +10,7 @@
     angular.module('AppAboutMe')
         .controller('AppCtrl', AppCtrl);
 
-    function AppCtrl($interval){
+    function AppCtrl($interval,$timeout){
         var ame = this;
         ame.selectedLink = 0;
         var widthSpinner = 0;
@@ -23,6 +23,8 @@
         ame.onSelectLink= function(stt){
             ame.selectedLink = stt;
         };
+        ame.showSpinner = true;
+
         $interval(function(){
             widthSpinner++;
             if(widthSpinner <= 100){
@@ -30,7 +32,11 @@
                     width: widthSpinner+'%'
                 };
             }
-        })
+        });
+
+        $timeout(function(){
+            ame.showSpinner = false;
+        },2000)
 
 
     }
