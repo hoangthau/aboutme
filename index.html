@@ -13,6 +13,7 @@
 <body class="content-wrapper" ng-controller="AppCtrl as ame">
     <div class="sidebar" ng-class="{ 'sidebar-hidden': ame.sidebarHidden }">
         <span class="sidebar-icon"><i class="fa fa-reorder pull-right" ng-click="ame.hideSideBar()"></i></span>
+        <span><i class="fa fa-home icon-home" ng-click="ame.selectedLink=false"></i></span>
         <div class="clearfix text-center info">
             <img src="imgs/personal.jpg" alt="Thau Nguyen" class="img-circle">
             <h3 class="name">Thau Nguyen</h3>
@@ -34,7 +35,6 @@
             </ul>
         </nav>
         <div style="padding: 20px;">
-            <span ng-show="ame.selectedLink"><i class="fa fa-2x fa-home icon-home" ng-click="ame.selectedLink=false"></i></span>
             <div class="welcome" ng-show="!ame.selectedLink">
                 <h3 class="app-heading">Introduction</h3>
                 <p style="text-align: justify;">My major is Computer Science. I've graduated at Can Tho University with very good Bachelor Degree.
@@ -43,7 +43,7 @@
 
                 I'm an experienced web developer with over 2 years of experiences through studying(Can Tho University) and working( TMA Solutions).</p>
             </div>
-            <div class="skill animate-scale" ng-show="ame.selectedLink===1">
+            <div class="skill" ng-show="ame.selectedLink===1">
                 <div class="bg">
                     <img src="imgs/angular.png" alt="">
                     <img src="imgs/html5.png" alt="">
@@ -62,7 +62,7 @@
 
                 </div>
             </div>
-            <div class="project animate-slide" ng-show="ame.selectedLink===2">
+            <div class="project" ng-show="ame.selectedLink===2">
                 <h3 class="app-heading">Library Management System</h3>
 
                 <p>A web application for small and medium-size companies, which supports administrators in:</p>
@@ -113,11 +113,8 @@
                     <li>Shell script</li>
                 </ul>
             </div>
-            <div class="hobby animate-slide" ng-show="ame.selectedLink===3">
-                <h3 class="app-heading">Video</h3>
-                <iframe width="560" height="315" src="http://www.youtube.com/embed/dkf4J8cy0qU" frameborder="0" allowfullscreen></iframe>
-                <h3 class="app-heading">Music</h3>
-                <iframe width="410" height="100" src="http://mp3.zing.vn/embed/song/ZWZE7898?autostart=false" frameborder="0" allowfullscreen="true"></iframe>
+            <div class="hobby" ng-show="ame.selectedLink===3">
+
             </div>
         </div>
     </div>
@@ -128,6 +125,7 @@
         <div class="load-spinner" ng-style="ame.widthSpinner"></div>
         <span><i class="fa fa-4x fa-spinner fa-spin"></i></span>
     </div>
+    <div class="bg-hidden" ng-click="ame.hideSideBar()" ng-show="ame.showBg"></div>
 <script src="libs/angular.js"></script>
 <script src="libs/angular-route.js"></script>
 <script src="libs/jquery-1.11.1.min.js"></script>

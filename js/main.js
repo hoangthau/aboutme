@@ -6,8 +6,7 @@
  * To change this template use File | Settings | File Templates.
  */
 (function (){
-    angular.module('AppAboutMe',['ngRoute']);
-    angular.module('AppAboutMe')
+    angular.module('AppAboutMe',['ngRoute'])
         .controller('AppCtrl', AppCtrl);
 
     function AppCtrl($interval,$timeout){
@@ -17,13 +16,17 @@
         ame.widthSpinner = {
             width: widthSpinner+'%'
         };
+        ame.showBg = true;
+        ame.showSpinner = true;
+
         ame.hideSideBar = function(){
             ame.sidebarHidden = !ame.sidebarHidden;
+            ame.showBg = !ame.sidebarHidden;
         };
         ame.onSelectLink= function(stt){
             ame.selectedLink = stt;
         };
-        ame.showSpinner = true;
+
 
         $interval(function(){
             widthSpinner++;
